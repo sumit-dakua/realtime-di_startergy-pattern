@@ -1,16 +1,14 @@
-package com.sd.vo;
+package com.sd.bo;
 
-public class CustomerVo {
+public class customerBo {
 
-  // private
   private String customerNo;
   private String customerName;
   private String customerAddress;
   private String principleAmount;
   private String rateOfInterest;
-  private String timePeriod;
 
-  // setters and getters
+  // getters and setters
   public String getCustomerNo() {
     return customerNo;
   }
@@ -49,14 +47,6 @@ public class CustomerVo {
 
   public void setRateOfInterest(String rateOfInterest) {
     this.rateOfInterest = rateOfInterest;
-  }
-
-  public String getTimePeriod() {
-    return timePeriod;
-  }
-
-  public void setTimePeriod(String timePeriod) {
-    this.timePeriod = timePeriod;
   }
 
 }

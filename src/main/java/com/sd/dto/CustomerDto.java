@@ -1,8 +1,9 @@
-package com.sd.vo;
+package com.sd.dto;
 
-public class CustomerVo {
+import java.io.Serializable;
 
-  // private
+public class CustomerDto implements Serializable {
+
   private String customerNo;
   private String customerName;
   private String customerAddress;
@@ -10,7 +11,6 @@ public class CustomerVo {
   private String rateOfInterest;
   private String timePeriod;
 
-  // setters and getters
   public String getCustomerNo() {
     return customerNo;
   }
@@ -58,5 +58,8 @@ public class CustomerVo {
   public void setTimePeriod(String timePeriod) {
     this.timePeriod = timePeriod;
   }
+
+  // getters and setter
+  //
 
 }
