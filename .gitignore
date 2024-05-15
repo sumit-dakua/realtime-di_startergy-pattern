@@ -1,1 +1,22 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+
+# Compiled binaries
 target/
+*.class
+
+# IDE files
+.idea/
+.vscode/
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Logs and temporary files
+*.log
+*.tmp
