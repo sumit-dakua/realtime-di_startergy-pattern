@@ -9,10 +9,10 @@ import com.sd.vo.CustomerVo;
  */
 public class MainController {
 
-  private IcustomerService service;
+  private IcustomerService custService;
 
-  public MainController(IcustomerService service) {
-    this.service = service;
+  public MainController(IcustomerService custService) {
+    this.custService = custService;
   }
 
   public String processCutomer(CustomerVo custVo) throws Exception {
@@ -25,7 +25,7 @@ public class MainController {
     dto.setTimePeriod(Double.parseDouble(custVo.getTimePeriod()));
 
     // using service
-    String resultMsg = service.registerCustomer(dto);
+    String resultMsg = custService.registerCustomer(dto);
     return resultMsg;
   }
 
