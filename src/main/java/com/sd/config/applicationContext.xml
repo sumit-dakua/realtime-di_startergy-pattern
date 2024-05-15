@@ -3,6 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+  <!-- datasource config-->
   <bean id='dataSource' class="org.springframework.jdbc.datasource.DriverManagerDataSource">
     <property name="driverClassName" value="org.postgresql.Driver" />
     <property name="url" value="jdbc:postgresql://localhost:5432/practice_dbs" />
@@ -10,4 +11,18 @@
     <property name="password" value="sudo$%db" />
   </bean>
 
+  <!-- Dao config-->
+  <bean id="custDao" class="com.sd.dao.CustomerDaoPostgres">
+    <constructor-arg ref="dataSource" />
+  </bean>
+
+  <!-- service config-->
+  <bean id="custService" class="com.sd.service.CustomerServiceImpl">
+    <constructor-arg  ref="custDao" />
+  </bean>
+
+  <!-- controller config-->
+  <bean id="controller" class="com.sd.controller.MainController">
+    <constructor-arg  ref="custService" />
+  </bean>
 </beans>

@@ -14,7 +14,10 @@ class CustomerDaoPostgres implements ICustomerDao {
 
   private DataSource ds;
 
-  @Override
+  public CustomerDaoPostgres(DataSource ds) {
+    this.ds = ds;
+  }
+
   public int insert(CustomerBo custBo) throws Exception {
     int count = 0;
     try (Connection con = ds.getConnection();
