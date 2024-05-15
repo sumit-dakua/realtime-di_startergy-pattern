@@ -7,10 +7,11 @@ public class CustomerDto implements Serializable {
   private String customerNo;
   private String customerName;
   private String customerAddress;
-  private String principleAmount;
-  private String rateOfInterest;
-  private String timePeriod;
+  private double principleAmount;
+  private double rateOfInterest;
+  private double timePeriod;
 
+  // getters and setter
   public String getCustomerNo() {
     return customerNo;
   }
@@ -35,31 +36,30 @@ public class CustomerDto implements Serializable {
     this.customerAddress = customerAddress;
   }
 
-  public String getPrincipleAmount() {
+  public double getPrincipleAmount() {
     return principleAmount;
   }
 
-  public void setPrincipleAmount(String principleAmount) {
+  public void setPrincipleAmount(double principleAmount) {
     this.principleAmount = principleAmount;
   }
 
-  public String getRateOfInterest() {
+  public double getRateOfInterest() {
     return rateOfInterest;
   }
 
-  public void setRateOfInterest(String rateOfInterest) {
+  public void setRateOfInterest(double rateOfInterest) {
     this.rateOfInterest = rateOfInterest;
   }
 
-  public String getTimePeriod() {
+  public double getTimePeriod() {
     return timePeriod;
   }
 
-  public void setTimePeriod(String timePeriod) {
+  public void setTimePeriod(double timePeriod) {
     this.timePeriod = timePeriod;
   }
 
-  // getters and setter
   //
 
 }

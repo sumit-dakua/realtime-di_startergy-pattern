@@ -20,9 +20,9 @@ public class MainController {
     CustomerDto dto = new CustomerDto();
     dto.setCustomerName(custVo.getCustomerName());
     dto.setCustomerAddress(custVo.getCustomerAddress());
-    dto.setPrincipleAmount(custVo.getPrincipleAmount());
-    dto.setRateOfInterest(custVo.getRateOfInterest());
-    dto.setTimePeriod(custVo.getTimePeriod());
+    dto.setPrincipleAmount(Double.parseDouble(custVo.getPrincipleAmount()));
+    dto.setRateOfInterest(Double.parseDouble(custVo.getRateOfInterest()));
+    dto.setTimePeriod(Double.parseDouble(custVo.getTimePeriod()));
 
     // using service
     String resultMsg = service.registerCustomer(dto);
