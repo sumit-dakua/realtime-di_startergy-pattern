@@ -19,7 +19,14 @@ class CustomerDaoPostgres implements ICustomerDao {
     int count = 0;
     try (Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(CUSTOMER_INSERT_QUERY)) {
+
       if (ps != null) {
+        ps.setString(1, custBo.getCustomerName());
+        ps.setString(2, custBo.getCustomerAddress());
+        ps.setDouble(3, custBo.getPrincipleAmount());
+        ps.setDouble(4, custBo.getInterestAmount());
+        // execute query
+        count = ps.executeUpdate();
 
       }
 
